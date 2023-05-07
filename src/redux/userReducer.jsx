@@ -19,13 +19,14 @@ export const userReducer = (state = INITIAL_USER, action) => {
         ...state,
         users: payload,
         loading: false,
-        error: "",
+        err: "",
       };
     case USER_ACTIONS_TYPES.FETCH_USERS_FAILURE:
       return {
         ...state,
         users: [],
-        error: payload,
+        err: payload,
+        loading: false,
       };
     default:
       return state;

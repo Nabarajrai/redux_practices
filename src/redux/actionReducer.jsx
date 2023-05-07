@@ -44,8 +44,8 @@ export const FetchUsers = () => {
         const users = res.data;
         dispatch(FetchUserSuccess(users));
       })
-      .catch(error => {
-        const errorMsg = error.message;
+      .catch(err => {
+        const errorMsg = err.message;
         dispatch(FetchUserError(errorMsg));
       });
   };
